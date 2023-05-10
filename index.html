@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO list</title>
+    <link rel = "stylesheet" href="style.css">
+
+</head>
+<body>
+<div class = "header"></div>
+<h1 id = "TODO">T O D O</h1>
+
+<form class = "add_todo">
+    <input type = "text" id = "new_todo" placeholder = "Add a new todo!">
+    <span onclick="newElement()" id="add">+</span>
+</form>
+
+<ul id="myUL">
+    <li>
+        <p contenteditable="true">Потрапити до спортзалу<p>
+        <span class="close">×</span>
+    </li>
+    <li>
+        <p contenteditable="true">Оплатити рахунки<p>
+        <span class="close">×</span>
+    </li>
+    <li>
+        <p contenteditable="true">Познайомиться з Лесею<p>
+        <span class="close">×</span>
+    </li>
+    <li>
+        <p contenteditable="true">Купити яйця<p>
+        <span class="close">×</span>
+    </li>
+    <li>
+        <p contenteditable="true">Прочитати книгу<p>
+        <span class="close">×</span>
+    </li>
+    <li>
+        <p contenteditable="true">Організувати офіс<p>
+        <span class="close">×</span>
+    </li>
+</ul>
+
+<script src = "script.js"></script>
+</body>
+</html>
