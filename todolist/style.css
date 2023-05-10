@@ -1,0 +1,196 @@
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*HEADER*/
+body{
+    background: #c1e2f1;
+    overflow-x: hidden;
+}
+.header{
+    position: relative;
+    width: 735px;
+    left: calc(50% - 368px);
+    padding: 100px;
+    background: url("images/header.jpg") no-repeat;
+}
+.header:before{
+    content: '';
+    position: absolute;
+    width: calc(100% - 200px);
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(10, 63, 10, 0.5);
+}
+#TODO{
+    position: relative;
+    top: -163px;
+    left:calc(50% - 320px);
+    color: floralwhite;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/*FORM*/
+.add_todo{
+    position: relative;
+    top: -85px;
+    left:calc(50% - 165px);
+}
+#new_todo{
+    padding: 15px;
+    width: 300px;
+    outline:none;
+}
+#new_todo::placeholder{
+    color: rgba(60, 98, 8, 0.7);
+}
+#add{
+    border-radius: 50%;
+    padding: 3px 8px;
+    border-color: transparent;
+    background: #a1e2f1;
+    color: darkblue;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/*LIST OF TODOS*/
+
+/* Удалите поля и отступы из списка */
+ul {
+    position: relative;
+    top: -60px;
+    left: calc(50% - 368px);
+    width: 735px;
+    margin: 0;
+    padding: 0;
+    color: rgb(32, 54, 2);
+}
+
+/* Стиль элементов списка */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: floralwhite;
+    font-size: 18px;
+    transition: 0.2s;
+
+    /* сделайте элементы списка невыбираемыми */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Более темный фон-цвет при наведении */
+ul li:hover {
+    background: #bbd7c7;
+}
+
+ul li p{
+    padding: 2px;
+}
+
+/* При нажатии на кнопку, добавить цвет фона и вычеркнуть текст */
+ul li.checked {
+    background: #31ab4e;
+    color: floralwhite;
+    text-decoration: line-through;
+}
+
+ul li button{
+    background: #c7fac9;
+    color: #203602;
+    cursor: pointer;
+    border-color: #98d73e;
+}
+
+ul li input[type=text] {
+    display:none;
+}
+
+ul li.editMode input[type=text] {
+    display:block;
+}
+
+ul li.editMode label {
+    display:none;
+}
+
+ul li input[type = "checkbox"]
+{
+    display: none;
+}
+
+/* Добавить "checked" отметить при нажатии на кнопку */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: floralwhite;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Стиль кнопки "Закрыть" */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    color: rgb(32, 54, 2);
+    font-weight: 800;
+}
+
+.close:hover {
+    background-color: #d26055;
+    color: floralwhite;
+}
+
